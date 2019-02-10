@@ -20,3 +20,33 @@ html {
     font-size: 1.rem;
     margin-left:2%;
 }
+
+.nav-inner {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    padding-bottom: 2%;
+    border-bottom: 1px solid aliceblue;
+}
+
+.nav-inner * {
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 20px;
+    color: aliceblue;
+
+}
+
+.logo {
+    margin-left: 5%;
+
+}
+
+.login {
+    margin-left: 75%;
+}
+
+.sign-up {
+    cursor: pointer;
+    margin-left: 5%;
+}

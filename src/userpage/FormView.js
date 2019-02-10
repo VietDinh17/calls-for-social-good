@@ -49,6 +49,7 @@ class FormView extends React.Component{
          console.log(response);
      })
      .catch(function(err){console.log(err)})
+
  }
     render(){
         const {date, time} = this.state
@@ -77,7 +78,7 @@ class FormView extends React.Component{
                         </div>
                         
                         {/* <input id="search-submit" type="submit" onSubmit={this.formSubmit}/> */}
-                        <button onClick={this.formSubmit}>ggg</button>
+                        <button className="submit-btn" onClick={this.formSubmit}>Submit</button>
                             
                     
                     </fieldset>
