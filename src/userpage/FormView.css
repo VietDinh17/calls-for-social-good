@@ -12,10 +12,13 @@ html {
 }
 
 .left-pic {
-    max-width: 100%;
+    position: absolute;
+    height: 100vh;
+    z-index: -1;
 }
 .form-holder {
     width: 50%;
+    padding-left: 60%;
 }
 
 #search-fieldset{
@@ -43,8 +46,9 @@ legend {
 }
 
 #reminder {
-    width: 50%;
-    height: 200px;
+    width: 60%;
+    height: 80px;
+    border-radius: 10px;
 }
 
 #date, #year {
@@ -61,4 +65,8 @@ legend {
     display: flex;
     justify-content: center;
     flex-direction: column;
+}
+
+fieldset label {
+    padding:2% 0 2% 0;
 }

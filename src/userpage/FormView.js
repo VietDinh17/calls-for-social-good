@@ -6,14 +6,6 @@ import Axios from 'axios';
 
 
 
-axios({
-    method: "post",
-    url: "",
-    data: {
-        date: "1344582000",
-        reminder: "check in on"
-    }
-}
 
 
 
@@ -22,13 +14,13 @@ class FormView extends React.Component{
         return(
             <div class="form-view">
             <div class="pic-holder">
-                <img class="left-pic" src="https://i.imgur.com/qTMNZsc.jpg" alt=""/>
+                <img class="left-pic" src="https://i.imgur.com/y8FRBRP.jpg" alt=""/>
             </div>
             <div class="form-holder">
                 <form id="search-form" role="form">
                 <legend>Set a Reminder</legend>
                     <fieldset id="search-fieldset">
-                        <label for="reminder">Remind me of:</label>
+                        <label for="reminder">Remind me about:</label>
                         <input id="reminder" type="text" name="reminder"/>
                         <label for="date">On this date:</label>
                         <select id="date" name="date">
