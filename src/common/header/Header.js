@@ -6,6 +6,10 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import MusicNote from '@material-ui/icons/MusicNoteRounded';
+import {Link} from "react-router-dom"
+import './header.css';
+import Phone from '@material-ui/icons/PhonelinkSetupRounded';
+
 
 const styles = {
   root: {
@@ -19,19 +23,32 @@ const styles = {
     marginLeft: -12,
     marginRight: 20,
   },
+  nav: {
+    display: "flex",
+    justifyContent: "space-between",
+  }
+  
 };
+
 
 function Header(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
       <AppBar position="static" color="default">
-        <Toolbar>
-          <MusicNote />
+        <Toolbar className={classes.nav}>
+        <div className="logo">
+          <Phone />
+          <Link to="/">
           <Typography variant="h6" color="inherit" className={classes.grow}>
             CareTaker
           </Typography>
+          </Link>
+          </div>
+          <div class="nav-btns">
           <Button color="inherit">Login</Button>
+          <Button color="inherit">Sign Up</Button>
+          </div>
         </Toolbar>
       </AppBar>
     </div>

@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './HomePage.css';
+import Phone from '@material-ui/icons/Phone';
+import List from '@material-ui/icons/ListAlt';
+import Person from '@material-ui/icons/PersonPin';
 
 
 
@@ -44,6 +47,7 @@ class HomePage extends React.Component{
                             <div id="what-is">
                                 <div className="info-blocc">
                                     <ul className="un-list">
+                                        <Phone/>
                                         <li>Responsive callers</li>
                                         <li>Real people</li>
                                         <li>Get remind</li>
@@ -52,6 +56,7 @@ class HomePage extends React.Component{
                                 </div>
                                 <div className="info-blocc">
                                     <ul className="un-list">
+                                    <List/>
                                         <li>Remember Important:</li>
                                         <li>Dates</li>
                                         <li>Events</li>
@@ -60,6 +65,7 @@ class HomePage extends React.Component{
                                 </div>
                                 <div className="info-blocc">
                                     <ul className="un-list">
+                                    <Person/>
                                     <li>Peace of mind</li>
                                     <li>Assurance</li>
                                     <li>Verified callers</li>
