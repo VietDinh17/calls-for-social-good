@@ -22,9 +22,9 @@ class HomePage extends React.Component{
                         <div id="jumbo">
                         <div id="inner-1">
                             <div id="left-jumbo">
-                            <h1>Never forget with CareTaker</h1>
+                            <h1>Call for Social Good</h1>
                             <div>
-                            <p id="info-block" className="html">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <p id="info-block" className="html">Calls for Social Good crowdsources human reminders for a more personable touch. Pre-screened volunteers make a personal call at a given time to check up on or remind users. Privacy is of utmost importance, and phone numbers are completely anonymized. Volunteers see only the first name and provided reminder info, and receive a text from a proxy number to call when it is time to deliver the reminder.</p>
                             <img id="left-top" src="https://images.unsplash.com/photo-1532077087200-5e14a551dd53?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80" alt=""></img>
                             <img id="right-bottom" src="https://images.unsplash.com/photo-1522356039805-7dedeb7e0f60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80" alt=""></img>
                             </div>
@@ -42,8 +42,10 @@ class HomePage extends React.Component{
 
                     <main>
                         <section id="what-this">
-                            <h2>What is CareTaker</h2>
-                            <p>Our App crowdsources human reminders for a more personable touch. Pre-screened volunteers make a personal call at a given time to check up on or remind users. Privacy is of utmost importance, and phone numbers are completely anonymized. Volunteers see only the first name and provided reminder info, and receive a text from a proxy number to call when it is time to deliver the reminder.</p>
+                            <h2>What is CSG</h2>
+                            <p>Now with the ability to set an emergency contact if the call is not answered. Whether a reminder to take your medications or needing someone to check up on your elderly neighbor, Calls for Social Good is the perfect solution.
+
+Enjoy the peace of mind knowing that you have a personalized phone call to keep you accountable</p>
                             <div id="what-is">
                                 <div className="info-blocc">
                                     <ul className="un-list">

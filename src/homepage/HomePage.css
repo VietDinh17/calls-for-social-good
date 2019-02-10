@@ -83,6 +83,7 @@ h1 {
 }
 
 .info-button {
+    width: 100px;
     color: aliceblue;
     border: 1px solid aliceblue;
     border-radius: 5px;
