@@ -41,7 +41,7 @@ class CallerView extends React.Component{
     }
     componentDidMount(){
         let self = this;
-        axios.get('https://calcium-scholar-231323.appspot.com/reminders')
+        axios.get('https://cors-anywhere.herokuapp.com/https://calcium-scholar-231323.appspot.com/reminders')
             .then(function (respone){
                 self.setState({
                     reminders : respone.data.reminders

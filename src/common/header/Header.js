@@ -46,7 +46,9 @@ function Header(props) {
           </Link>
           </div>
           <div class="nav-btns">
-          <Button color="inherit">Login</Button>
+          <Link to='/login' style={{ textDecoration: 'none'}}>
+            <Button >Login</Button>
+          </Link>
           <Button color="inherit">Sign Up</Button>
           </div>
         </Toolbar>
