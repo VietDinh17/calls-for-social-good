@@ -1,3 +1,7 @@
+html {
+    font-size: 10px;
+}
+
 .form-view {
     display: flex;
     justify-content: flex-start;
@@ -12,4 +16,49 @@
 }
 .form-holder {
     width: 50%;
+}
+
+#search-fieldset{
+    font-size: 2rem;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+#search-fieldset input{
+    margin: 0 auto;
+}
+
+fieldset {
+    
+    border: none;
+}
+legend {
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+}
+
+#reminder {
+    width: 50%;
+    height: 200px;
+}
+
+#date, #year {
+    margin: 0 auto;
+}
+
+.radios {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.radios label {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }

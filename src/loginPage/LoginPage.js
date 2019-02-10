@@ -8,13 +8,13 @@ class LoginPage extends React.Component{
         return(
             <div>
                 <div className="login-select">
-                <   Link to="/caller">
+                <   Link to="/caller" className="login-block">
 
                     <div className="caller-select">
                         <div className="inner-call"><img class="john" src="https://i.imgur.com/2UN3RmG.jpg"></img><h2 className="c-btn">John <br/>Caller</h2></div>
                     </div>
                     </Link>
-                    <Link to='/form'>
+                    <Link to='/form' className="login-block">
                     <div className="callee-select">
                         <div className="inner-call"><img class="mary" src="https://i.imgur.com/mjffNQA.jpg"></img><h2 className="c2-btn">Mary <br/>Call-ee</h2></div>
                     </div>
