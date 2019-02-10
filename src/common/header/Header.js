@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import MusicNote from '@material-ui/icons/MusicNoteRounded';
 import {Link} from "react-router-dom"
 import './header.css';
-import Phone from '@material-ui/icons/PhonelinkSetupRounded';
+import Phone from '@material-ui/icons/PersonOutlineTwoTone';
 
 
 const styles = {

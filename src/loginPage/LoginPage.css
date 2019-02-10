@@ -5,6 +5,7 @@
 
 .c-btn, .c2-btn {
     text-align: center;
+    color: aliceblue;
 }
 
 .caller-select, .callee-select {
@@ -14,8 +15,20 @@
     height: 500px;
 }
 
+.caller-select:hover {
+    
+}
+
 .inner-call {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+.john, .mary {
+    max-width: 200px;
+    height: 200px;
+    border: 1px solid aliceblue;
+    border-radius: 50%;
 }
