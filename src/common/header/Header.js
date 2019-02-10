@@ -41,7 +41,7 @@ function Header(props) {
           <Phone />
           <Link to="/">
           <Typography variant="h6" color="inherit" className={classes.grow}>
-            CareTaker
+            Calls for Social Good
           </Typography>
           </Link>
           </div>

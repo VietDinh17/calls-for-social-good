@@ -47,9 +47,10 @@ class FormView extends React.Component{
          time: this.state.convertedString,
      }).then(function(response) {
          console.log(response);
+         window.location.reload();
      })
      .catch(function(err){console.log(err)})
-     this.setState({domain:!this.state.domain})
+     
      
 
  }
