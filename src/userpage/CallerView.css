@@ -1,0 +1,26 @@
+html {
+    font-size: 10px;
+}
+
+
+#profile-pic-main {
+    width: 150px;
+    
+}
+
+#picmain {
+    font-size: 2rem;
+}
+
+#picmain ul {
+    list-style-type: none;
+}
+
+#caller-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+}

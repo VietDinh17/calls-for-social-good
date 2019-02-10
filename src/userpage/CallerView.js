@@ -1,15 +1,17 @@
 import React from 'react';
 import { Typography } from '@material-ui/core';
-import PropTypes from 'prop-types';
+import PropTypes, { func } from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
-import Checkbox from '@material-ui/core/Checkbox';
 import Avatar from '@material-ui/core/Avatar';
 import './CallerView.css'
+import axios from 'axios';
+import Collapse from '@material-ui/core/Collapse';
+
 
 const styles = theme => ({
   root: {
@@ -19,36 +21,30 @@ const styles = theme => ({
   },
 });
 
-const users = [
-    {
-        name: "kaka",
-        pic: "https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-512.png"
-    },
-    {
-        name: "lala",
-        pic: "https://png2.kisspng.com/sh/3923f1608f080159ed97426f2f5a4143/L0KzQYm3VcA6N6R9fZH0aYP2gLBuTfF3aaVmip9Eb4X3hbPsTcguapJxhJ95b3BvPcb6hgIuPZJrS6QDZHO3cYbthcEvQWE9SqcDNkm0RYO8WMg2OWU9S6I9Nz7zfri=/kisspng-avatar-youtube-8-ball-pool-user-5af328dc4a5fe1.9082586915258851483047.png"   
-    },
-    {
-        name: "kaka",
-        pic: "https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-512.png"
-    },
-    {
-        name: "kaka",
-        pic: "https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-512.png"
-    },
-    {
-        name: "kaka",
-        pic: "https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-512.png"
-    },    {
-        name: "kaka",
-        pic: "https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-512.png"
-    },
-]
-
+let user = {
+    "name": "John",
+    "pic": "https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-512.png"
+}
 
 class CallerView extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            users : [],
+        }
+    }
     componentDidMount(){
-
+        let self = this;
+        axios.get('https://48ca599c-9f88-4c75-965b-465084a2340a.mock.pstmn.io/get')
+            .then(function (respone){
+                self.setState({
+                    users : respone.data.users
+                })
+                console.log(respone);
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
     }
 
     componentWillUnmount(){
@@ -57,16 +53,19 @@ class CallerView extends React.Component{
     
     render(){
         const {classes} = this.props;
+        const {users} = this.state;
         return(
             <div>
                 <div>
-                    <div>
+                    <div id="picmain">
                         <ul>
-                            <li></li>
+                        <Typography></Typography>
+                        <li><img id="profile-pic-main" src={user.pic}></img></li>
+                        <li>{user.name}</li>
                         </ul>
                     </div>
                 </div>
-                <div>
+                <div id="caller-list">
                     <Typography>Caller List</Typography>
                     <List dense className={classes.root}>
                         {users.map(value => (
