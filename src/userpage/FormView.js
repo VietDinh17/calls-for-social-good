@@ -1,6 +1,6 @@
 import React from 'react'
 import './FormView.css'
-import Axios from 'axios';
+import axios from 'axios';
 // import Calendar from 'react-calendar'
 import {DateFormatInput, TimeFormatInput} from 'material-ui-next-pickers'
 
@@ -13,7 +13,8 @@ class FormView extends React.Component{
     state = {
       date: new Date(),
       time: '',
-      convertedString: ''
+      convertedString: '',
+      value:''
         
 
     }
@@ -24,10 +25,30 @@ class FormView extends React.Component{
       onChangeTime = (time:Date) => {
         console.log('Time: ', time)
         this.setState({time})
+        
       } 
      
  convertStr = ()  => {
     this.state.convertedString = this.date.slice(0, 42) + this.time.slice(15);
+ }
+
+ setValue = (event) => {
+     this.setState({value: event.target.value});
+     console.log(this.state.value);
+ }
+
+ formSubmit = () =>{
+     console.log("123",this.state.date, this.state.time);
+    this.state.convertedString = new Date((this.state.date.toString()).slice(0, 42) + (this.state.time.toString()).slice(15)).getTime() / 1000
+    
+    console.log(this.state.value, this.state.convertedString);
+     axios.post('https://cors-anywhere.herokuapp.com/https://calcium-scholar-231323.appspot.com/reminders', {
+         info: this.state.value,
+         time: this.state.convertedString,
+     }).then(function(response) {
+         console.log(response);
+     })
+     .catch(function(err){console.log(err)})
  }
     render(){
         const {date, time} = this.state
@@ -37,7 +58,7 @@ class FormView extends React.Component{
                 <img className="left-pic" src="https://i.imgur.com/y8FRBRP.jpg" alt=""/>
             </div>
             <div class="form-holder">
-                <form id="search-form" role="form">
+                {/* <form id="search-form" role="form" onSubmit={this.formSubmit}> */}
                 <legend>Set a Reminder</legend>
                     <fieldset id="search-fieldset">
                         <label for="date">On this date:</label>
@@ -52,14 +73,15 @@ class FormView extends React.Component{
                             </div>
                             <div className="text-block">
                             <label for="reminder">Remind me about:</label>
-                        <input id="reminder" type="text" name="reminder"/>
+                        <input id="reminder" type="text" name="reminder" onChange={this.setValue}/>
                         </div>
                         
-                        <input id="search-submit" type="submit" onSubmit={this.convertStr}/>;
+                        {/* <input id="search-submit" type="submit" onSubmit={this.formSubmit}/> */}
+                        <button onClick={this.formSubmit}>ggg</button>
                             
-                        }}/>
+                    
                     </fieldset>
-                </form>
+                {/* </form> */}
             </div>
             </div>
         )

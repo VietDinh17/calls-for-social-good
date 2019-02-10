@@ -17,7 +17,9 @@ class Footer extends React.Component{
         const {classes} = this.props;
         return(
             <div className={classes.bar}> 
-                <Appbar position="relative" color="secondary" className={classes.bar}></Appbar>
+                <footer>
+                    <div></div>
+                </footer>
             </div>
         )
     }
