@@ -22,7 +22,7 @@ class HomePage extends React.Component{
                         <div id="jumbo">
                         <div id="inner-1">
                             <div id="left-jumbo">
-                            <h1>Call for Social Good</h1>
+                            <h1>Calls for Social Good</h1>
                             <div>
                             <p id="info-block" className="html">Calls for Social Good crowdsources human reminders for a more personable touch. Pre-screened volunteers make a personal call at a given time to check up on or remind users. Privacy is of utmost importance, and phone numbers are completely anonymized. Volunteers see only the first name and provided reminder info, and receive a text from a proxy number to call when it is time to deliver the reminder.</p>
                             <img id="left-top" src="https://images.unsplash.com/photo-1532077087200-5e14a551dd53?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80" alt=""></img>

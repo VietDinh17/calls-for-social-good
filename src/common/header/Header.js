@@ -35,18 +35,24 @@ function Header(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <div className='nav-bar'>
-        <ul className='nav-inner'>
-          <Link className="logo" to='/'>
-          <li>Logo</li>
+      <AppBar position="static" color="default">
+        <Toolbar className={classes.nav}>
+        <div className="logo">
+          <Phone />
+          <Link to="/">
+          <Typography variant="h6" color="inherit" className={classes.grow}>
+            CareTaker
+          </Typography>
           </Link>
-          <Link className="login" to='/login'>
-          <li>Login</li>
+          </div>
+          <div className="nav-btns">
+          <Link to='/login' style={{ textDecoration: 'none'}}>
+            <Button >Login</Button>
           </Link>
-          <li className="sign-up">Sign Up</li>
-          
-        </ul>
-      </div>
+          <Button color="inherit">Sign Up</Button>
+          </div>
+        </Toolbar>
+      </AppBar>
     </div>
   );
 }

@@ -14,8 +14,8 @@ class FormView extends React.Component{
       date: new Date(),
       time: '',
       convertedString: '',
-      value:''
-        
+      value:'',
+    domain:false
 
     }
     onChangeDate = (date:Date) => {
@@ -49,6 +49,8 @@ class FormView extends React.Component{
          console.log(response);
      })
      .catch(function(err){console.log(err)})
+     this.setState({domain:!this.state.domain})
+     
 
  }
     render(){
