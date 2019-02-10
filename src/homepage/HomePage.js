@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './HomePage.css'
+import './HomePage.css';
+
+
+
 
 class HomePage extends React.Component{
     render(){
@@ -33,6 +36,45 @@ class HomePage extends React.Component{
                         </Link>
                         </div>
                     </section>
+
+                    <main>
+                        <section id="what-this">
+                            <h2>What is CallerApp</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                            <div id="what-is">
+                                <div className="info-blocc">
+                                    <ul className="un-list">
+                                        <li>Responsive callers</li>
+                                        <li>Real people</li>
+                                        <li>Get remind</li>
+                                        <li>Never forget</li>
+                                    </ul>
+                                </div>
+                                <div className="info-blocc">
+                                    <ul className="un-list">
+                                        <li>Remember Important:</li>
+                                        <li>Dates</li>
+                                        <li>Events</li>
+                                        <li>Appointments</li>
+                                    </ul>
+                                </div>
+                                <div className="info-blocc">
+                                    <ul className="un-list">
+                                    <li>Peace of mind</li>
+                                    <li>Assurance</li>
+                                    <li>Verified callers</li>
+                                    <li>Safe loved ones</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section>
+                            <div><img id="pic2" src="https://i.imgur.com/3dxQuAG.jpg"></img>
+                                <div></div>
+                            </div>
+                        </section>
+                    </main>
                 
             </div>
         )
