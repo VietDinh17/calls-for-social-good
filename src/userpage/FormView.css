@@ -1,0 +1,15 @@
+.form-view {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.pic-holder {
+    max-width: 50%;
+}
+
+.left-pic {
+    max-width: 100%;
+}
+.form-holder {
+    width: 50%;
+}
