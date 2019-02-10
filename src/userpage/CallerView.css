@@ -36,6 +36,8 @@ html {
     border-radius: 3px;
     border: 1px solid aliceblue;
     cursor: pointer;
+    position: absolute;
+    right:0;
 }
 
 .call-btn:hover {
@@ -45,10 +47,22 @@ html {
 
 .call-item-name {
     font-size: 2rem;
+    max-width: 33%;
 }
 
 #profile-list {
     width: 20%;
     color: aliceblue;
 
+}
+
+.root {
+    width: 100%;
+    border-bottom: 1px solid grey;
+    background-color: rgba(85, 64, 191, 0.5);
+}
+
+li.call-item-name {
+    margin-right:2%;
+    width: 25%;
 }

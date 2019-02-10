@@ -16,11 +16,11 @@ import Modal from '@material-ui/core/Modal';
 
 
 const styles = theme => ({
-  root: {
-    width: '100%',
-    maxWidth: 800,
-    backgroundColor: "#725fcf",
-  },
+//   root: {
+//     width: '100%',
+//     maxWidth: 800,
+//     backgroundColor: "red",
+//   },
   paper: {
     position: 'absolute',
     width: theme.spacing.unit * 50,

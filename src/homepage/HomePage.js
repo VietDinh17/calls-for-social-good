@@ -43,7 +43,7 @@ class HomePage extends React.Component{
                     <main>
                         <section id="what-this">
                             <h2>What is CallerApp</h2>
-                            <p> crowdsources human reminders for a more personable touch. Pre-screened volunteers make a personal call at a given time to check up on or remind users. Privacy is of utmost importance, and phone numbers are completely anonymized. Volunteers see only the first name and provided reminder info, and receive a text from a proxy number to call when it is time to deliver the reminder.</p>
+                            <p>Our App crowdsources human reminders for a more personable touch. Pre-screened volunteers make a personal call at a given time to check up on or remind users. Privacy is of utmost importance, and phone numbers are completely anonymized. Volunteers see only the first name and provided reminder info, and receive a text from a proxy number to call when it is time to deliver the reminder.</p>
                             <div id="what-is">
                                 <div className="info-blocc">
                                     <ul className="un-list">

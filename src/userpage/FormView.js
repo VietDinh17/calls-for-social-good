@@ -1,5 +1,21 @@
 import React from 'react'
 import './FormView.css'
+import Axios from 'axios';
+
+
+
+
+
+axios({
+    method: "post",
+    url: "",
+    data: {
+        date: "1344582000",
+        reminder: "check in on"
+    }
+}
+
+
 
 class FormView extends React.Component{
     render(){
