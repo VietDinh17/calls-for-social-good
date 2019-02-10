@@ -45,7 +45,7 @@ function Header(props) {
           </Typography>
           </Link>
           </div>
-          <div class="nav-btns">
+          <div className="nav-btns">
           <Link to='/login' style={{ textDecoration: 'none'}}>
             <Button >Login</Button>
           </Link>

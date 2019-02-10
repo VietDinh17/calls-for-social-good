@@ -1,16 +1,33 @@
 import React from 'react'
 import './FormView.css'
 import Axios from 'axios';
-
-
-
+// import Calendar from 'react-calendar'
+import {DateFormatInput, TimeFormatInput} from 'material-ui-next-pickers'
 
 
 
 
 
 class FormView extends React.Component{
+
+    state = {
+      date: new Date(),
+      time: ''
+
+
+    }
+    onChangeDate = (date:Date) => {
+        console.log('Date: ', date)
+        this.setState({date})
+      } 
+      onChangeTime = (time:Date) => {
+        console.log('Time: ', time)
+        this.setState({time})
+      } 
+     
+
     render(){
+        const {date, time} = this.state
         return(
             <div class="form-view">
             <div class="pic-holder">
@@ -23,34 +40,14 @@ class FormView extends React.Component{
                         <label for="reminder">Remind me about:</label>
                         <input id="reminder" type="text" name="reminder"/>
                         <label for="date">On this date:</label>
-                        <select id="date" name="date">
-                            <option value="01">January</option>
-                            <option value="02">February</option>
-                            <option value="03">March</option>
-                            <option value="04">April</option>
-                            <option value="05">May</option>
-                            <option value="06">June</option>
-                            <option value="07">July</option>
-                            <option value="08">August</option>
-                            <option value="09">September</option>
-                            <option value="10">October</option>
-                            <option value="11">November</option>
-                            <option value="12">December</option>
-                        </select>
-                        <label for="day">Day</label>
-                        <input id="day" type="text"></input>
-                        <label for="year">Year</label>
-                        <input id="year" type="text"></input>
-                        <div class="radios">
-                        <label for="daily">Daily
-                        <input type="radio" id="daily"></input>
-                        </label>
-                        <label for="weekly">Weekly
-                        <input type="radio" id="weekly"></input>
-                        </label>
-                        <label for="monthly">Monthly
-                        <input type="radio" id="monthly"></input>
-                        </label>
+                        <div class="calendar">
+                            <label for="date-input">Day
+                            <DateFormatInput name='date-input' value={date} onChange={this.onChangeDate}/>
+                            
+                            </label>
+                            <label for="time-input"> Time
+                            <TimeFormatInput name='time-input' value={time} onChange={this.onChangeTime}/>
+                            </label>
                         </div>
                         <input id="search-submit" type="submit"/>
                     </fieldset>
@@ -60,5 +57,25 @@ class FormView extends React.Component{
         )
     }
 }
+
+
+// class FormView extends React.Component {
+//     state = {
+//       date: new Date(),
+//     }
+   
+//     onChange = date => this.setState({ date })
+   
+//     render() {
+//       return (
+//         <div>
+//           <Calendar
+//             onChange={this.onChange}
+//             value={this.state.date}
+//           />
+//         </div>
+//       );
+//     }
+//   }
 
 export default FormView;

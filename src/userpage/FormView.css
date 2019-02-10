@@ -70,3 +70,16 @@ legend {
 fieldset label {
     padding:2% 0 2% 0;
 }
+
+.calendar {
+    display: flex;
+    justify-content: center;
+}
+
+#search-submit {
+    border-radius: 5px;
+    background-color: white;
+    width: 100px;
+    height: 50px;
+    border: 1px solid white;
+}
