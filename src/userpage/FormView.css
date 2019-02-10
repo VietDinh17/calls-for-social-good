@@ -91,5 +91,20 @@ fieldset label {
 }
 
 .submit-btn {
+    width: 100px;
+    color: #f0f8ff;
+    border: 1px solid #f0f8ff;
+    border-radius: 5px;
+    background-color: initial;
+    font-size: 1.5rem;
+    margin-right: 5%;
+    padding: 10px;
     margin: 0 auto;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: aliceblue;
+    color: rgba(85, 64, 191, 1);
 }
