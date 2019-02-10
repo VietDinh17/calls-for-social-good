@@ -13,10 +13,15 @@
     justify-content: center;
     width: 50%;
     height: 500px;
+    cursor: pointer;
 }
 
 .caller-select:hover {
-    
+    background-color: rgba(230, 230, 230, 0.5);
+}
+
+.callee-select:hover {
+    background-color: rgba(230, 230, 230, 0.5);
 }
 
 .inner-call {
