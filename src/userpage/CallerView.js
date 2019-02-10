@@ -50,6 +50,7 @@ class CallerView extends React.Component{
             reminders : [],
             profile: {},
             open: false,
+            refres: false,
         }
     };
 
@@ -82,6 +83,28 @@ class CallerView extends React.Component{
             })
     }
 
+    handlePost(reminder){
+        console.log(reminder)
+        axios.post('https://cors-anywhere.herokuapp.com/https://calcium-scholar-231323.appspot.com/update_reminder', 
+        {
+            info: reminder.info,
+            caller: reminder.caller,
+            time: reminder.time,
+            name: reminder.name,
+            callee: reminder.callee,
+            id: reminder.id
+        })
+        .then(res => {
+            console.log(res);
+            console.log(res.data);
+          })
+        .catch(function (error) {
+            console.log(error);
+        })
+        this.handleClose();
+        let change = this.state.reminders.filter(r => r.id == reminder.id);
+        this.setState({reminders:change})
+    }
 
     componentWillUnmount(){
 
@@ -105,10 +128,10 @@ class CallerView extends React.Component{
                     </div>
                 </div>
                 <div id="caller-list">
-                    <Typography id="caller-main">Caller List</Typography>
+                    <Typography id="caller-main" variant="h2">Caller List</Typography>
                     <List dense className={classes.root}>
                         {reminders.map(reminder => (
-                        <ListItem key={reminder.callee} button>
+                        <ListItem key={reminder.id} button>
                             <ListItemAvatar>
                             <Avatar
 
@@ -129,8 +152,8 @@ class CallerView extends React.Component{
                                 <Typography variant="h6" id="modal-title">
                                     You are Going to Register for This
                                 </Typography>
-                                <Button>Yes</Button>
-                                <Button>Cancle</Button>
+                                <Button size="large" variant="outlined" color="secondary" onClick={ () => this.handlePost(reminder) }>Yes</Button>
+                                <Button size="large" component="span" variant="outlined" onClick={this.handleClose}>Cancle</Button>
                             </div>
                             </Modal>
                             <button class="call-btn" onClick={this.handleOpen}>Setup Reminder</button>
