@@ -17,10 +17,38 @@ html {
 }
 
 #caller-list {
+    font-size: 2rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
     margin: 0 auto;
     text-align: center;
     align-items: center;
+}
+
+#caller-main {
+    color: aliceblue;
+    font-size: 2rem;
+}
+
+.call-btn {
+    background-color: transparent;
+    border-radius: 3px;
+    border: 1px solid aliceblue;
+    cursor: pointer;
+}
+
+.call-btn:hover {
+    background-color: #41a85f;
+    padding: 2%;
+}
+
+.call-item-name {
+    font-size: 2rem;
+}
+
+#profile-list {
+    width: 20%;
+    color: aliceblue;
+
 }

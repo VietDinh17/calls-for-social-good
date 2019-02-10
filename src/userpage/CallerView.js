@@ -11,13 +11,18 @@ import Avatar from '@material-ui/core/Avatar';
 import './CallerView.css'
 import axios from 'axios';
 import Collapse from '@material-ui/core/Collapse';
+import { red } from '@material-ui/core/colors';
+
+
+
+
 
 
 const styles = theme => ({
   root: {
     width: '100%',
-    maxWidth: 360,
-    backgroundColor: theme.palette.background.paper,
+    maxWidth: 500,
+    backgroundColor: "aliceblue",
   },
 });
 
@@ -31,6 +36,7 @@ class CallerView extends React.Component{
         super(props);
         this.state = {
             users : [],
+            profile: {},
         }
     }
     componentDidMount(){
@@ -45,28 +51,39 @@ class CallerView extends React.Component{
             .catch(function (error) {
                 console.log(error);
             })
+        
+            axios.get("https://f763df06-87de-4654-b6f5-5e49742ba2da.mock.pstmn.io/get")
+                .then(res => {
+                    self.setState({
+                        profile : res.data.user,
+                    })
+                })
     }
+
 
     componentWillUnmount(){
 
     }
+
     
     render(){
         const {classes} = this.props;
-        const {users} = this.state;
+        const {users, profile} = this.state;
         return(
             <div>
                 <div>
                     <div id="picmain">
-                        <ul>
+                        <ul id="profile-list">
                         <Typography></Typography>
-                        <li><img id="profile-pic-main" src={user.pic}></img></li>
-                        <li>{user.name}</li>
+                        <li><img id="profile-pic-main" src={profile.pic}></img></li>
+                        <li>{profile.name}</li>
+                        <li>{profile.age} Years Old</li>
+                        <li>{profile.adress}</li>
                         </ul>
                     </div>
                 </div>
                 <div id="caller-list">
-                    <Typography>Caller List</Typography>
+                    <Typography id="caller-main">Caller List</Typography>
                     <List dense className={classes.root}>
                         {users.map(value => (
                         <ListItem key={value} button>
@@ -76,7 +93,8 @@ class CallerView extends React.Component{
                                 src={value.pic}
                             />
                             </ListItemAvatar>
-                            <ListItemText primary={value.name} />
+                            <li class="call-item-name">{value.name}</li>
+                            <button class="call-btn">Call Now</button>
                             <ListItemSecondaryAction>
                             {/* <Checkbox
                                 onChange={this.handleToggle(value)}
