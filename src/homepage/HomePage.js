@@ -22,7 +22,7 @@ class HomePage extends React.Component{
                         <div id="jumbo">
                         <div id="inner-1">
                             <div id="left-jumbo">
-                            <h1>CallerApp</h1>
+                            <h1>Never forget with CareTaker</h1>
                             <div>
                             <p id="info-block" className="html">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                             <img id="left-top" src="https://images.unsplash.com/photo-1532077087200-5e14a551dd53?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80" alt=""></img>
@@ -34,7 +34,7 @@ class HomePage extends React.Component{
                         <div id="info-nav">
                         <button className="info-button">Learn More</button>
                         <Link to='/caller'>
-                        <button className="info-button">CallNow</button>
+                        <button className="info-button">Call Now</button>
 
                         </Link>
                         </div>
@@ -42,7 +42,7 @@ class HomePage extends React.Component{
 
                     <main>
                         <section id="what-this">
-                            <h2>What is CallerApp</h2>
+                            <h2>What is CareTaker</h2>
                             <p>Our App crowdsources human reminders for a more personable touch. Pre-screened volunteers make a personal call at a given time to check up on or remind users. Privacy is of utmost importance, and phone numbers are completely anonymized. Volunteers see only the first name and provided reminder info, and receive a text from a proxy number to call when it is time to deliver the reminder.</p>
                             <div id="what-is">
                                 <div className="info-blocc">

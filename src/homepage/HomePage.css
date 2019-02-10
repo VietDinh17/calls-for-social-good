@@ -46,7 +46,7 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 #info-block {
@@ -67,10 +67,12 @@ body {
 }
 
 h1 {
+    /* color: black; */
     border-top: 1px solid aliceblue;
     text-align: left;
     margin-left: 10%;
     font-size: 3.5rem;
+    width: 50%;
 }
 
 #info-nav {

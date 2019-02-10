@@ -12,8 +12,9 @@ class FormView extends React.Component{
 
     state = {
       date: new Date(),
-      time: ''
-
+      time: '',
+      convertedString: ''
+        
 
     }
     onChangeDate = (date:Date) => {
@@ -25,22 +26,22 @@ class FormView extends React.Component{
         this.setState({time})
       } 
      
-
+ convertStr = ()  => {
+    this.state.convertedString = this.date.slice(0, 42) + this.time.slice(15);
+ }
     render(){
         const {date, time} = this.state
         return(
-            <div class="form-view">
-            <div class="pic-holder">
-                <img class="left-pic" src="https://i.imgur.com/y8FRBRP.jpg" alt=""/>
+            <div className="form-view">
+            <div className="pic-holder">
+                <img className="left-pic" src="https://i.imgur.com/y8FRBRP.jpg" alt=""/>
             </div>
             <div class="form-holder">
                 <form id="search-form" role="form">
                 <legend>Set a Reminder</legend>
                     <fieldset id="search-fieldset">
-                        <label for="reminder">Remind me about:</label>
-                        <input id="reminder" type="text" name="reminder"/>
                         <label for="date">On this date:</label>
-                        <div class="calendar">
+                        <div className="calendar">
                             <label for="date-input">Day
                             <DateFormatInput name='date-input' value={date} onChange={this.onChangeDate}/>
                             
@@ -48,8 +49,15 @@ class FormView extends React.Component{
                             <label for="time-input"> Time
                             <TimeFormatInput name='time-input' value={time} onChange={this.onChangeTime}/>
                             </label>
+                            </div>
+                            <div className="text-block">
+                            <label for="reminder">Remind me about:</label>
+                        <input id="reminder" type="text" name="reminder"/>
                         </div>
-                        <input id="search-submit" type="submit"/>
+                        
+                        <input id="search-submit" type="submit" onSubmit={this.convertStr}/>;
+                            
+                        }}/>
                     </fieldset>
                 </form>
             </div>
