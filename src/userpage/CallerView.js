@@ -94,7 +94,7 @@ class CallerView extends React.Component{
                             />
                             </ListItemAvatar>
                             <li class="call-item-name">{value.name}</li>
-                            <button class="call-btn">Call Now</button>
+                            <button class="call-btn">Setup Reminder</button>
                             <ListItemSecondaryAction>
                             {/* <Checkbox
                                 onChange={this.handleToggle(value)}
