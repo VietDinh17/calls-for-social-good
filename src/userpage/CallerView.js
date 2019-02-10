@@ -9,6 +9,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Checkbox from '@material-ui/core/Checkbox';
 import Avatar from '@material-ui/core/Avatar';
+import './CallerView.css'
 
 const styles = theme => ({
   root: {
@@ -58,26 +59,35 @@ class CallerView extends React.Component{
         const {classes} = this.props;
         return(
             <div>
-                <Typography>People</Typography>
-                <List dense className={classes.root}>
-                    {users.map(value => (
-                    <ListItem key={value} button>
-                        <ListItemAvatar>
-                        <Avatar
-                            alt={`Avatar n°${1 + 1}`}
-                            src={value.pic}
-                        />
-                        </ListItemAvatar>
-                        <ListItemText primary={value.name} />
-                        <ListItemSecondaryAction>
-                        {/* <Checkbox
-                            onChange={this.handleToggle(value)}
-                            checked={this.state.checked.indexOf(value) !== -1}
-                        /> */}
-                        </ListItemSecondaryAction>
-                    </ListItem>
-                    ))}
-                </List>
+                <div>
+                    <div>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <Typography>Caller List</Typography>
+                    <List dense className={classes.root}>
+                        {users.map(value => (
+                        <ListItem key={value} button>
+                            <ListItemAvatar>
+                            <Avatar
+                                alt={`Avatar n°${1 + 1}`}
+                                src={value.pic}
+                            />
+                            </ListItemAvatar>
+                            <ListItemText primary={value.name} />
+                            <ListItemSecondaryAction>
+                            {/* <Checkbox
+                                onChange={this.handleToggle(value)}
+                                checked={this.state.checked.indexOf(value) !== -1}
+                            /> */}
+                            </ListItemSecondaryAction>
+                        </ListItem>
+                        ))}
+                    </List>
+                </div>
             </div>
         )
     }
