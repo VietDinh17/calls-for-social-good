@@ -22,7 +22,7 @@ const styles = theme => ({
   root: {
     width: '100%',
     maxWidth: 500,
-    backgroundColor: "aliceblue",
+    backgroundColor: "#725fcf",
   },
 });
 
@@ -35,16 +35,16 @@ class CallerView extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            users : [],
+            reminders : [],
             profile: {},
         }
     }
     componentDidMount(){
         let self = this;
-        axios.get('https://48ca599c-9f88-4c75-965b-465084a2340a.mock.pstmn.io/get')
+        axios.get('https://calcium-scholar-231323.appspot.com/reminders')
             .then(function (respone){
                 self.setState({
-                    users : respone.data.users
+                    reminders : respone.data.reminders
                 })
                 console.log(respone);
             })
@@ -57,7 +57,7 @@ class CallerView extends React.Component{
                     self.setState({
                         profile : res.data.user,
                     })
-                })
+            })
     }
 
 
@@ -68,7 +68,7 @@ class CallerView extends React.Component{
     
     render(){
         const {classes} = this.props;
-        const {users, profile} = this.state;
+        const {reminders, profile} = this.state;
         return(
             <div>
                 <div>
@@ -85,15 +85,16 @@ class CallerView extends React.Component{
                 <div id="caller-list">
                     <Typography id="caller-main">Caller List</Typography>
                     <List dense className={classes.root}>
-                        {users.map(value => (
-                        <ListItem key={value} button>
+                        {reminders.map(reminder => (
+                        <ListItem key={reminder.callee} button>
                             <ListItemAvatar>
                             <Avatar
+
                                 alt={`Avatar n°${1 + 1}`}
-                                src={value.pic}
+                                src="https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-512.png"
                             />
                             </ListItemAvatar>
-                            <li class="call-item-name">{value.name}</li>
+                            <li class="call-item-name">{reminder.info}</li>
                             <button class="call-btn">Setup Reminder</button>
                             <ListItemSecondaryAction>
                             {/* <Checkbox

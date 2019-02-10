@@ -33,7 +33,7 @@ class HomePage extends React.Component{
                         </div>
                         <div id="info-nav">
                         <button className="info-button">Learn More</button>
-                        <Link to='/CallerView'>
+                        <Link to='/caller'>
                         <button className="info-button">CallNow</button>
 
                         </Link>

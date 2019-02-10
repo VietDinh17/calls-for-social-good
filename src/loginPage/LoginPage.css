@@ -1,0 +1,21 @@
+.login-select {
+    display: flex;
+    justify-content: center;
+}
+
+.c-btn, .c2-btn {
+    text-align: center;
+}
+
+.caller-select, .callee-select {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 500px;
+}
+
+.inner-call {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
