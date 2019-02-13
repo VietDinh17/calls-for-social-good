@@ -5,7 +5,6 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import MusicNote from '@material-ui/icons/MusicNoteRounded';
 import {Link} from "react-router-dom"
 import './header.css';
 import Phone from '@material-ui/icons/PersonOutlineTwoTone';

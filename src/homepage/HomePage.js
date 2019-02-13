@@ -78,7 +78,7 @@ Enjoy the peace of mind knowing that you have a personalized phone call to keep 
                         </section>
 
                         <section>
-                            <div><img id="pic2" src="https://i.imgur.com/3dxQuAG.jpg"></img>
+                            <div><img id="pic2" src="https://i.imgur.com/3dxQuAG.jpg" alt=""/>
                                 <div></div>
                             </div>
                         </section>

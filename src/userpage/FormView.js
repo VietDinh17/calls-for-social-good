@@ -13,7 +13,6 @@ class FormView extends React.Component{
     state = {
       date: new Date(),
       time: '',
-      convertedString: '',
       value:'',
     domain:false
 
@@ -22,15 +21,11 @@ class FormView extends React.Component{
         console.log('Date: ', date)
         this.setState({date})
       } 
-      onChangeTime = (time:Date) => {
+    onChangeTime = (time:Date) => {
         console.log('Time: ', time)
         this.setState({time})
         
       } 
-     
- convertStr = ()  => {
-    this.state.convertedString = this.date.slice(0, 42) + this.time.slice(15);
- }
 
  setValue = (event) => {
      this.setState({value: event.target.value});
@@ -38,13 +33,11 @@ class FormView extends React.Component{
  }
 
  formSubmit = () =>{
-     console.log("123",this.state.date, this.state.time);
-    this.state.convertedString = new Date((this.state.date.toString()).slice(0, 42) + (this.state.time.toString()).slice(15)).getTime() / 1000
+    let convertedString = new Date((this.state.date.toString()).slice(0, 42) + (this.state.time.toString()).slice(15)).getTime() / 1000
     
-    console.log(this.state.value, this.state.convertedString);
-     axios.post('https://cors-anywhere.herokuapp.com/https://calcium-scholar-231323.appspot.com/reminders', {
+    axios.post('https://cors-anywhere.herokuapp.com/https://calcium-scholar-231323.appspot.com/reminders', {
          info: this.state.value,
-         time: this.state.convertedString,
+         time: convertedString,
      }).then(function(response) {
          console.log(response);
          window.location.reload();

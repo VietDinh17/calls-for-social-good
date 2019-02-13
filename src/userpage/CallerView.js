@@ -1,6 +1,6 @@
 import React from 'react';
 import { Typography } from '@material-ui/core';
-import PropTypes, { func } from 'prop-types';
+import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -102,7 +102,7 @@ class CallerView extends React.Component{
             console.log(error);
         })
         this.handleClose();
-        let change = this.state.reminders.filter(r => r.id == reminder.id);
+        let change = this.state.reminders.filter(r => r.id !== reminder.id);
         this.setState({reminders:change})
     }
 
@@ -120,7 +120,7 @@ class CallerView extends React.Component{
                     <div id="picmain">
                         <ul id="profile-list">
                         <Typography></Typography>
-                        <li><img id="profile-pic-main" src={profile.pic}></img></li>
+                        <li><img id="profile-pic-main" src={profile.pic} alt=""/></li>
                         <li>{profile.name}</li>
                         <li>{profile.age} Years Old</li>
                         <li>{profile.adress}</li>
