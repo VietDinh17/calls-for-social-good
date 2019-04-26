@@ -6,7 +6,7 @@
   <br>
 </h1>
 
-<h4 align="center">A web app for making automated reminders more personal. <a href="https://reactjs.org/" target="_blank">React</a> and <a href="http://flask.pocoo.org/" target="_blank">Flask</a></h4>
+<h4 align="center">A web app for making automated reminders more personal using <a href="https://reactjs.org/" target="_blank">React</a> and <a href="http://flask.pocoo.org/" target="_blank">Flask</a></h4>
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
